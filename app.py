@@ -13,8 +13,7 @@ app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
 @app.route('/predict',methods=['GET','POST'])
 def display():
-    data_path = 'E:\\PythonProjects\\Salary Prediction\\'
-    data=pd.read_csv(data_path + 'Salary.csv')
+    data=pd.read_csv('Salary.csv')
     print(data)
 
     print(data.describe())
