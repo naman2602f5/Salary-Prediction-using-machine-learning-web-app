@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    
+</head>
+<body>
+    <center><h1>Salary Prediction Model</h1></center>
+    <center><img src="{{ user_image }}"></center>
+    <h2><div class="custom-select">
+        <br>
+        <center>
+        <form action="{{ url_for('display')}}" method="post">
+            <input type="text" name="YearsExperience" placeholder="Experience">
+        <br>
+        <label for="Salary-dropdown">Enter the Experience of Employee</label>
+        </center>
+    </div></h2>
+    <br>
+    <center>
+    <div id="Salary-div">
+        <button id="Salary-id">Submit</button>
+    </div>
+    </form>
+    <br>
+    <h3><b>{{ prediction_text }}</b></h3>
+</body>
+</html>
